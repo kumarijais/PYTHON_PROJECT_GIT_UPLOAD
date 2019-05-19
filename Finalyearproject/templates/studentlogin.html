@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <head>
+        <title>Welcome to OAS private limited</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+ body {margin:0;}
+#header {
+    background-color:blue;
+    color:white;
+    text-align:center;
+    padding:1px;
+}
+#footer {
+    background-color:white ;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+.button {
+	background-color:grey ;
+	padding: 14px 300px;
+ border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+	background-color:orange ;
+	color : white;
+padding: 14px 300px;
+}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                top: 0;
+                width: 100%;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active){
+                background-color: #111;
+            }
+            .active{
+                background-color: #4CAF50;
+            }
+            input[type=submit] {
+    width: 5em;  height: 2em;
+}
+input[type=text]{
+    margin: auto;
+    padding: 3px;
+}
+
+input[type=password]{
+    margin: auto;
+    padding: 3px;
+}
+#footer {
+    background-color:gainsboro;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+
+        </style>
+    </head>
+    <body>
+    <div>
+        <img src="{{url_for('static',filename='LOGO.png')}}">
+        </div>
+<div >
+<table>
+<tr>
+<td>
+<form action="/home">
+<button type="submit" class="button button1">
+    <b>   HOME </b>
+   </button>
+   </form>
+   </td>
+  <td>
+<form action="contact">
+<button type="submit" class="button button1">
+    <b>   CONTACTS </b>
+   </button>
+   </form>
+   </td>
+  <td>
+</tr>
+</table>
+
+        
+        
+        
+    <form action="/svalidateLogin" method="POST">
+
+        
+        <div style="background-color: gainsboro; display: block ; text-align: center; padding: 7px;">
+            <h1><b>Student Sign In</b></h1>
+            <br>
+            
+            
+            User Name: <input type="text" placeholder="Enter your name" name="t1" size="40"/><br><br>
+            Password: <input type="password" placeholder="Enter your rollno(i.e 'ABC/YYYY/NN')" name="t2" size="40"/><br><br>
+            <input type="submit" value="LOGIN" />
+           <br><br>
+            <a href="/forgetpswd">Forgot password</a><br><br>
+            Not a member yet?<br><a href="/sregister">Create a new account</a>
+        </div>  
+        </form>
+        
+         <div align="center" id="footer">
+   <p style="font-size: 16px; font-weight: bold;">Copyright &#169 2017 - I.T.A. Solutions Pvt Ltd. All Rights Reserved.
+   </p>
+   </div>
+</div>
+        
+        
+    </body>
+</html>

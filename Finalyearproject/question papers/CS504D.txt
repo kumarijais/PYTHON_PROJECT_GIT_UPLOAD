@@ -1,0 +1,7 @@
+Q1) Explain the string buffer class?
+
+Q2) Define method overriding in java?
+
+Q3) Apply the concept of constructor for calculating area of rectangle?
+
+Q4) Contrast between abstract class and interface?

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Teacher Registration</title>
+<style>
+ body {margin:0;}
+#header {
+    background-color:blue;
+    color:white;
+    text-align:center;
+    padding:1px;
+}
+#footer {
+    background-color:white ;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+.button {
+	background-color:grey ;
+	padding: 14px 300px;
+ border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+	background-color:orange ;
+	color : white;
+padding: 14px 300px;
+}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                top: 0;
+                width: 100%;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active){
+                background-color: #111;
+            }
+            .active{
+                background-color: #4CAF50;
+            }
+            input[type=submit] {
+    width: 5em;  height: 2em;
+}
+input[type=text]{
+    margin: auto;
+    padding: 3px;
+}
+
+input[type=password]{
+    margin: auto;
+    padding: 3px;
+}
+        </style>
+</head>
+<body>
+        <img src="{{url_for('static',filename='LOGO.png')}}" >
+<div >
+<table>
+<tr>
+<td>
+<form action="home">
+<button type="submit" class="button button1">
+    <b>   HOME </b>
+   </button>
+   </form>
+   </td>
+  <td>
+<form action="contact">
+<button type="submit" class="button button1">
+    <b>   CONTACTS </b>
+   </button>
+   </form>
+   </td>
+  <td>
+</tr>
+</table>
+        <div style="background-color: gainsboro; display: block ; text-align: center; padding: 7px;">
+	<form action="/tsignup" method="post" style="display:inline-block;">
+
+            <h1><b>TEACHER REGISTRATION</b></h1>
+            <br>
+            First Name: <input type="text" name="fname" size="40"placeholder="Enter first name"/><br><br>
+		Surname: <input type="text" name="sname" size="40" placeholder="Enter surname"/><br><br>
+
+
+    Gender:
+    		<input type="radio" name="sex" value="Male">Male
+    		<input type="radio" name="sex" value="Female">Female
+    		<br><br>
+
+	Department:
+        <select name="subject">
+            <option>AUE</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EE</option>
+            <option>IT</option>
+            <option>ME</option>
+            <option>Humanities</option>
+            <option>Basic Science</option>
+        </select><br><br>
+        Institution Name:
+			<input type="text" name="instname" placeholder="Inst Name in short(i.e-'MCKVIE,AOT,IEM')"size="40"/><br><br>
+	Year of Joining:
+			<input type="text" name="year" size="40"placeholder="Enter year of joining(i.e'YYYY')"/><br><br>
+        Enrollment No: <input type="text" name="roll" value=""placeholder="Enter enrollment no(i.e'FAC/YYYY/NN')"size="40" /><br><br>
+	Phone Number:
+    			<input type="text" name="phone"><br><br>
+                Email_id: <input type="text" name="email" placeholder="Enter Number"size="40"/><br><br>
+        Password:
+			<input type="password" name="pswd" placeholder="Enter password" size="40"/><br><br>
+        Confirm Password:
+			<input type="password" name="cpswd"placeholder="Confirm Password" size="40"/><br><br>
+        <input type="submit" value="SUBMIT"/><br><br>
+
+
+
+	</form>
+
+        </div>
+
+
+        <div align="center" id="footer">
+   <p style="font-size: 16px; font-weight: bold;">Copyright &#169 2017 - OAS Solutions Pvt Ltd. All Rights Reserved.
+   </p>
+        </div>
+   </div>
+
+</body>
+
+</html>

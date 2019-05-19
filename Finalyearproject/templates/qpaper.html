@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<body>
+<form action="/new" method="post" >
+    <!-- Display the countdown timer in an element -->
+<p id="demo" align="right"></p>
+    <p id="demo1"></p>
+<table border="10" >
+    <tr ><th >Answer Sheet:</th>
+    <th >Question Paper</th>
+    </tr>
+    <tr>
+            <td width="200" height="300">
+            <textarea id="inputTextToSave" name="textarea" cols="80" rows="25"></textarea>
+        </td>
+        <td colspan="50">
+
+            {% for row in content %}
+            <label><br> {{ row[0] }}<br/></label>
+
+            {% endfor %}
+        </td>
+    </tr>
+
+
+
+</table>
+    <h1 align="center">
+        <input align="center" width="200"height="400" type="submit" name="action" value="Submit" onclick="saveProject()">
+</h1>
+</form>
+<script>
+var now = new Date().getTime();
+  var dest=now+(1000*10800);
+// Set the date we're counting down to
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  var countDownDate = dest
+  //document.getElementById("demo1").innerHTML=(dest-now);
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = hours +":"
+  + minutes +":" + seconds;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    $('#inputTextToSave').attr("disabled", "true")
+    alert('Over')
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+    function saveProject()
+    {
+    alert("Answers submitted successfully.Thanks for taking the test!");
+    location.reload()
+    }
+$("textarea").change(function(){
+    console.log('Hi')
+})
+$("textarea").change(function(){
+    console.log('Post request sending')
+    $.ajax({
+        url: '/new',
+        data: $('form').serialize(),
+        type: 'POST',
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

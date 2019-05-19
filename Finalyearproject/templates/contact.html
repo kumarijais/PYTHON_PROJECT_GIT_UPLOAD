@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {margin:0;}
+#header {
+    background-color:blue;
+    color:white;
+    text-align:center;
+    padding:1px;
+}
+#footer {
+    background-color:white ;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+.button {
+	background-color:grey ;
+	padding: 14px 300px;
+ border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+	background-color:orange ;
+	color : white;
+padding: 14px 300px;
+}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                top: 0;
+                width: 100%;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active){
+                background-color: #111;
+            }
+            .active{
+                background-color: #4CAF50;
+            }
+            input[type=submit] {
+    width: 5em;  height: 2em;
+}
+input[type=text]{
+    margin: auto;
+    padding: 3px;
+}
+
+input[type=password]{
+    margin: auto;
+    padding: 3px;
+}
+#footer {
+    background-color:gainsboro;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+        h1{
+        color:blue
+        }
+    </style>
+</head>
+<body>
+<div>
+        <img src="{{url_for('static',filename='LOGO.png')}}">
+        </div>
+<div >
+<table>
+<tr>
+<td>
+<form action="/home">
+<button type="submit" class="button button1">
+    <b>   HOME </b>
+   </button>
+   </form>
+   </td>
+  <td>
+<form action="contact">
+<button type="submit" class="button button1">
+    <b>   CONTACTS </b>
+   </button>
+   </form>
+   </td>
+  <td>
+</tr>
+</table>
+<div class="page-content">
+<h1>CONTACT US
+
+</h1>
+
+<h2><strong>Institute Address</strong></h2>
+
+<p>MCKV Institute of Engineering<br>
+243 G. T. Road (N)<br>
+Liluah Howrah – 711204<br>
++91 33 2654 9315/17<br>
+Fax: +91 33 2654 9318</p>
+
+Email:
+principal@mckvie.edu.in<br>
+mckvie@vsnl.net<br>
+<h3><strong>Admission Queries</strong></h3>
+
+<p>Contact Number : 9007017339<br>
+<div>
+
+<h3><strong>Trust Office</strong></h3>
+
+<p>‘Laxmi Niketan’ , 1st&nbsp;Floor<br>
+243, G. T. Road(North)<br>
+Liluah, Howrah – 711 204.</p>
+
+<p style="margin-left:0in;margin-right:0in;">Ph. : +91 33 26548604/ 05<br>
+Fax: +91 33 2654 9318</p>
+
+<p>Send Us an Email<br>
+Visit Us</p>     <a href="www.mckvie.edu.in">www.mckvie.edu.in</a>
+</div></div>
+
+</body>
+</html>

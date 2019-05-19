@@ -1,0 +1,14 @@
+Q1) Describe the three-schema architecture of DBMS?
+
+Q2) Write a short note on View?
+
+Q3) Compute the closure of the following set F of functional dependencies for the relation./* "Compute" comes under to "Apply" level, whereas "List"(comtained to the same question) falls under "Remember" level. The conflict is resolved by deciding the course outcome to which question number three belongs. */        
+    R = (A, B, C, D, E) 
+    A -> BC, CD -> E, B -> D, E -> A
+    List the candidate keys for R.
+
+Q4) Discuss the ACID properties of transaction?
+
+Q5) Explain briefly the concepts of generalization and specialization?
+
+                                                                  ***

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Welcome to OAS private limited</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+ body {margin:0;}
+#header {
+    background-color:blue;
+    color:white;
+    text-align:center;
+    padding:1px;
+}
+#footer {
+    background-color:white ;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+.button {
+	background-color:grey ;
+	padding: 14px 300px;
+ border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.h3{
+    color : blue;
+    text-align: center;
+}
+.button:hover {
+	background-color:orange ;
+	color : white;
+padding: 14px 300px;
+}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                top: 0;
+                width: 100%;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active){
+                background-color: #111;
+            }
+            .active{
+                background-color: #4CAF50;
+            }
+            input[type=submit] {
+    width: 5em;  height: 2em;
+}
+input[type=text]{
+    margin: auto;
+    padding: 3px;
+}
+
+input[type=password]{
+    margin: auto;
+    padding: 3px;
+}
+#footer {
+    background-color:gainsboro;
+    color:black;
+    text-align:center;
+    padding:3px;
+}
+
+        </style>
+    </head>
+    <body>
+        <div align="right">
+         <h1>
+    <a href="home"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+         </h1>
+
+        </div>
+
+
+    <div>
+        <img src="{{url_for('static',filename='LOGO.png')}}">
+        </div>
+<p >
+<table>
+<tr>
+<td>
+<form action="home">
+<button type="submit" class="button button1">
+    <b>   HOME </b>
+   </button>
+   </form>
+   </td>
+  <td>
+<form action="contact">
+<button type="submit" class="button button1">
+    <b>   CONTACTS </b>
+   </button>
+   </form>
+   </td>
+  <td>
+</tr>
+</table>
+
+
+        <form action="/submit" method="POST" enctype=multipart/form-data>
+            <b>  Welcome {{ name }} </b>
+       <!-- <br>
+            <button type="button">
+        <img src="{{url_for('static',filename='folder.png')}}">
+    <br/>
+Save
+</button>-->
+        <h3 align="center" color="yellow">
+        Stream:
+        <select name="subject">
+            <option>AUE</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EE</option>
+            <option>IT</option>
+            <option>ME</option>
+        </select></br></h3>
+       <h3 align="center"> SELECT THE SEMESTER
+        <select name="semester">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+         </br></h3>
+       <h3 align="center" color="yellow">
+         SELECT PAPER CODE
+         <select name="paper_code">
+             <option>CS504D</option>
+             <option>CS201</option>
+             <option>CS603</option>
+             <option>CS303</option>
+         </select>
+         </br>
+       </h3>
+
+
+
+
+        <h3 align="center">
+        <input type="file" name="file_to_upload">
+            <button type="submit">Upload</button></h3>
+         </form></h3>
+
+
+
+        </form>
+
+</div>
+    </body>
+</html>

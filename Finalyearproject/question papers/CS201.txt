@@ -1,0 +1,6 @@
+Q1) Define the different type of memory units?
+
+Q2) Explain the storage class in C?
+
+Q3) Show with the help of an example the difference between break and continue statement?
+
